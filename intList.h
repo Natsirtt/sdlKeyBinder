@@ -31,34 +31,36 @@ typedef struct {
 } intList;
 
 /**
- * Initialise la liste afin qu'elle soit utilisable.
- * A utiliser sur toute nouvelle variable du type intList avant utilisation.
+ * Initialisation of the list.
+ * Must be called on a new intList variable before any further usage.
  */
 void il_initList(intList *l);
 
 /**
- * Insert une intCellule avec la valeur value en tête de liste.
+ * Head insertion of "value" in the list "l".
  */
 void il_beginingInsert(intList *l, int value);
 
 /**
- * Supprime la première occurence de intCellule à valeur value.
- * Ne fait rien si aucune intCellule ne contient cette valeur.
+ * Deletes the first occurency of "value" in the list "l".
+ * Doesn't do anything if "value" wasn't in it.
  */
 void il_deleteValue(intList *l, int value);
 
 /**
- * Retourne 1 si la liste contient la valeur value, 0 sinon.
+ * Returns 1 if "value" is contained in the list "l", 0 otherwise.
  */
 int il_contains(intList *l, int value);
 
 /**
- * Détruit correctement la liste.
+ * Destroy the list.
+ * This should be called by the program using a list, otherwise some
+ * memory leaks could appear.
  */
 void il_destroyList(intList *l);
 
 /**
- * Donne la taille de la liste.
+ * Returns the size of the list "l".
  */
 int il_size(intList *l);
 
