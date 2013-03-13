@@ -35,23 +35,10 @@ handle of the keyboard inputs while using the SDL.
 
 You can have a keyBinder typed variable that you have to update at each
 SDL_KEYUP or SDL_KEYDOWN event so that it can keep for you the
-information of each key that is down or up. Here is an example of a
-function that is called every time a SDL_Event is polled in the main
-loop (kb is the keyBinder variable) :
+information of each key that is down or up.
+You can see an example of using keyBinders in that way in "example.c".
 
-void eventCatcher(SDL_Event *event) {
-  switch (event->type) {
-    case SDL_KEYDOWN:
-      skbKeyPressed(&kb, event->key.keysym.sym);
-      continue = !skbIsPressed(&kb, SDLK_ESCAPE); //If escape is pressed, the program will quit
-      break;
-    case SDL_KEYUP:
-      skbKeyReleased(&kb, event->key.keysym.sym);
-      break;
-  }
-}
-
-As you can see, testing if a key is currently pressed is as simple as
+As you will see, testing if a key is currently pressed is as simple as
 calling to skbIsPressed(), assuming you correctly called skbKeyPressed()
 and skbKeyReleased when it was necessary.
 
