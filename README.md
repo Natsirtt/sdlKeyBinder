@@ -29,6 +29,7 @@ Please write [SKB] at the beginning of your mail object so I can know
 what's the pupose of it.
 
 ------------------------------------------------------------------------
+**What is this library ?**
 
 The purpose of this library written in C is to provide a tool helping
 handle of the keyboard inputs while using the SDL.
