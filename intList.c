@@ -97,8 +97,12 @@ void il_deleteValue(intList *l, int value) {
 
 /**
  * Retourne 1 si la liste contient la valeur value, 0 sinon.
+ * Retourne -1 en cas d'erreur (si l == NULL par exemple)
  */
 int il_contains(intList *l, int value) {
+  if (l == NULL) {
+    return -1;
+  }
   intCell *tmp = l->data;
   while (tmp != NULL) {
     if (tmp->val == value) {
@@ -113,6 +117,9 @@ int il_contains(intList *l, int value) {
  * Détruit correctement la liste.
  */
 void il_destroyList(intList *l) {
+  if (l == NULL) {
+    return;
+  }
   intCell *tmp = l->data;
   while (l->data != NULL) {
     tmp = l->data;
