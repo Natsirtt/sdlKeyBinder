@@ -19,7 +19,7 @@ along with sdlKeyBinder.  If not, see <http://www.gnu.org/licenses/>.
 
 ------------------------------------------------------------------------
 
-Please report any bug to tristan.louet@etu.univ-rouen.fr
+Please report any bug to tristan.louet.dev@gmail.com
 Please also feel free to ask any question or make any suggestion at the
 same email address.
 I'll also be glad to know of every modification you made for your own
